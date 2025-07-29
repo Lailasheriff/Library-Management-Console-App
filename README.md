@@ -19,7 +19,7 @@ install the following:
 
 1. Clone the repo:
     ```bash
-    git clone https://github.com/Lailasheriff/Library-Management-Console-App
+    git clone https://github.com/Lailasheriff/Library-Management-Console-App library-management-app
     cd library-management-app
     ```
 2. clean previous state
@@ -51,11 +51,11 @@ DB_PASSWORD=Laila12345
 ## Access Instructions
 #### Adminer access
 open: http://localhost:8080
-System: MySql/MariaDB
-Server: db
-Username: root
-Password: Laila12345
-Database: library_db
+- System: MySql/MariaDB
+- Server: db
+- Username: root
+- Password: Laila12345
+- Database: library_db
 #### Application usage
 while app is running open a new terminal and run the following:
    ```bash
