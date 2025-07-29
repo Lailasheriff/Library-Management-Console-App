@@ -13,12 +13,13 @@ public class AdminMenuUtil {
         InputUtil inputUtil = new InputUtil();
 
         while (true) {
-            System.out.println("1 Add book");
-            System.out.println("2 Delete book");
-            System.out.println("3 Edit book");
-            System.out.println("4 Register regular user");
-            System.out.println("5 Back");
-            System.out.println("choose: ");
+            System.out.println("\n\t\tAdmin Menu\n");
+            System.out.println("1) Add book");
+            System.out.println("2) Delete book");
+            System.out.println("3) Edit book");
+            System.out.println("4) Register regular user");
+            System.out.println("5) Back");
+            System.out.print("\nchoose: ");
 
             Admin admin = new Admin(bookDao, userDao);
 
@@ -45,7 +46,7 @@ public class AdminMenuUtil {
                 }
 
                 case 3 -> {
-                    System.out.println("Enter book id to edit: ");
+                    System.out.print("Enter book id to edit: ");
                     int id = inputUtil.getInt(scanner);
 
                     System.out.print("Enter new title: ");

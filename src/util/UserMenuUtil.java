@@ -7,7 +7,6 @@ import model.RegularUser;
 import service.SearchService;
 import model.User;
 import org.hibernate.Session;
-
 import java.util.Scanner;
 
 public class UserMenuUtil {
@@ -30,14 +29,15 @@ public class UserMenuUtil {
         regularUser.setSession(session);
 
         while (true) {
-            System.out.println("1 View all books");
-            System.out.println("2 Borrow book");
-            System.out.println("3 Return book");
-            System.out.println("4 View my borrowed books");
-            System.out.println("5 View books for specific author");
-            System.out.println("6 View books for specific genre");
-            System.out.println("7 Back");
-            System.out.print("Choose: ");
+            System.out.println("\n\t\tUser Menu\n");
+            System.out.println("1) View all books");
+            System.out.println("2) Borrow book");
+            System.out.println("3) Return book");
+            System.out.println("4) View my borrowed books");
+            System.out.println("5) View books for specific author");
+            System.out.println("6) View books for specific genre");
+            System.out.println("7) Back");
+            System.out.print("\nChoose: ");
 
             int choice = inputUtil.getInt(scanner);
 
@@ -80,28 +80,28 @@ public class UserMenuUtil {
                 }
 
                 case 5 -> {
-                    System.out.println("Wanted author: ");
+                    System.out.print("Wanted author: ");
                     String author = scanner.nextLine();
                     if (searchServiceBook.searchByName(author, "author").isEmpty()) {
                         System.out.println("No books for specific author.");
                     } else {
-                        System.out.println("Books for author " + author + ": ");
+                        System.out.println("Books for author " + author + ": \n");
 
                         for (Book b : searchServiceBook.searchByName(author, "author")) {
-                            System.out.println("Author:  " + b.getAuthor() + "ID: " + b.getId() + " Title: " + b.getTitle() + " Genre:  " + b.getGenre());
+                            System.out.println("Author:  " + b.getAuthor() + " ID: " + b.getId() + " Title: " + b.getTitle() + " Genre:  " + b.getGenre());
                         }
                     }
                 }
 
                 case 6 -> {
-                    System.out.println("Wanted genre: ");
+                    System.out.print("Wanted genre: ");
                     String genre = scanner.nextLine();
                     if (searchServiceBook.searchByName(genre, "genre").isEmpty()) {
                         System.out.println("No books for specific genre.");
                     } else {
-                        System.out.println("Books for genre " + genre + ": ");
+                        System.out.println("Books for genre " + genre + ": \n");
                         for (Book b : searchServiceBook.searchByName(genre, "genre")) {
-                            System.out.println("Genre:  " + b.getGenre() + " ID: " + b.getId() + " Title: " + b.getTitle() + " Author:  " + b.getAuthor());
+                            System.out.println("Genre: " + b.getGenre() + " ID: " + b.getId() + " Title: " + b.getTitle() + " Author:  " + b.getAuthor());
                         }
                     }
                 }
