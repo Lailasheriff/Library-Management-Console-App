@@ -45,7 +45,7 @@ DB_HOST=db
 DB_PORT=3306
 DB_NAME=library_db
 DB_USER=root
-DB_PASSWORD=Laila12345
+DB_PASSWORD=your password
 ```
 ---
 ## Access Instructions
@@ -57,7 +57,6 @@ open: http://localhost:8080
 - Username: root
 - Password: your password
 - Database: library_db
-these values are defined in the .env file
 
 #### Application usage
 while app is running open a new terminal and run the following:
