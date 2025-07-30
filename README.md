@@ -51,11 +51,12 @@ DB_PASSWORD=Laila12345
 ## Access Instructions
 #### Adminer access
 open: http://localhost:8080
+
 - System: MySql/MariaDB
-- Server: ${DB_HOST}
-- Username: ${DB_USER}
-- Password: ${DB_PASSWORD}
-- Database: ${DB_NAME}
+- Server: db
+- Username: root
+- Password: your password
+- Database: library_db
 these values are defined in the .env file
 
 #### Application usage
