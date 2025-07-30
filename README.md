@@ -52,10 +52,12 @@ DB_PASSWORD=Laila12345
 #### Adminer access
 open: http://localhost:8080
 - System: MySql/MariaDB
-- Server: db
-- Username: root
-- Password: Laila12345
-- Database: library_db
+- Server: ${DB_HOST}
+- Username: ${DB_USER}
+- Password: ${DB_PASSWORD}
+- Database: ${DB_NAME}
+these values are defined in the .env file
+
 #### Application usage
 while app is running open a new terminal and run the following:
    ```bash
