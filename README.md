@@ -41,10 +41,10 @@ install the following:
 All configurations is managed using .env file:
 
 ```env
-DB_HOST=db
+DB_HOST=db 
 DB_PORT=3306
-DB_NAME=library_db
-DB_USER=root
+DB_NAME=library_db 
+DB_USER=root 
 DB_PASSWORD=your password
 ```
 ---
@@ -53,10 +53,10 @@ DB_PASSWORD=your password
 open: http://localhost:8080
 
 - System: MySql/MariaDB
-- Server: db
-- Username: root
-- Password: your password
-- Database: library_db
+- Server: db(from DB_HOST)
+- Username: root(from DB_USER)
+- Password: your password(from DB_PASSWORD)
+- Database: library_db(from DB_NAME)
 
 #### Application usage
 while app is running open a new terminal and run the following:
